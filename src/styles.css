@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f5f6fa; color: #182538; line-height: 1.5; }
+a { color: #3154b7; }
+button, input { font: inherit; }
+button, .button { cursor: pointer; }
+button:disabled { opacity: .65; cursor: wait; }
+.container { width: min(100% - 32px, 1000px); margin-inline: auto; }
+.site-header { background: white; border-bottom: 1px solid #e0e4ec; }
+.header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-size: 23px; font-weight: 800; text-decoration: none; color: #182538; }
+.header-link { font-size: 14px; }
+.home-page { padding-block: 48px; }
+.intro { max-width: 720px; margin-bottom: 32px; }
+h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.12; font-weight: 750; margin: 12px 0 20px; }
+h2 { font-size: 19px; font-weight: 700; margin-top: 12px; }
+.muted { color: #556276; margin-bottom: 24px; }
+.eyebrow { color: #3154b7; font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.button { display: inline-block; padding: 12px 22px; border: 0; border-radius: 9px; color: white; background: #3154b7; text-decoration: none; font-weight: 700; text-align: center; }
+.button:hover { background: #254392; }
+.slider { overflow: hidden; border-radius: 16px; background: #e0e4ec; }
+.slider img { width: 100%; height: clamp(220px, 40vw, 400px); object-fit: cover; display: block; }
+.slider-controls { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; background: #182538; color: white; }
+.slider-controls button { width: 48px; height: 40px; background: white; color: #182538; border: 0; border-radius: 8px; font-size: 24px; }
+.courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.course, .card { background: white; border: 1px solid #e0e4ec; border-radius: 14px; padding: 24px; }
+.form-page { max-width: 580px; padding-block: 32px 48px; }
+.back-link { display: inline-block; margin-bottom: 20px; }
+.form-page h1 { font-size: 32px; }
+.field { margin-top: 18px; }
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+input { width: 100%; padding: 12px; background: white; border: 1px solid #9da8b8; border-radius: 8px; }
+input[aria-invalid="true"] { border-color: #b3261e; }
+:focus-visible { outline: 3px solid #8ba6f2; outline-offset: 3px; }
+small { display: block; color: #556276; font-size: 12px; margin-top: 5px; }
+.error { color: #b3261e; font-size: 14px; margin-top: 5px; }
+.error:empty { display: none; }
+.success { color: #14653d; }
+.message { padding: 12px; background: #f5f6fa; border-radius: 8px; }
+form > .button { margin-top: 24px; width: 100%; }
+footer { color: #556276; padding: 24px 16px; text-align: center; font-size: 13px; }
+@media (max-width: 600px) {
+  .courses { grid-template-columns: 1fr; }
+  .card { padding: 20px; }
+  .home-page { padding-top: 32px; }
+  .brand { font-size: 20px; }
+}
+
+.header-nav { display: flex; flex-wrap: wrap; gap: 12px; }
+.form-link { margin-top: 20px; }
